@@ -40,6 +40,14 @@
   }
 }
 
+.dark {
+  background: #001529 !important;
+}
+
+.light {
+  background: white !important;
+}
+
 .logout {
   display: flex;
   justify-content: center;
@@ -53,5 +61,23 @@
     height: 15px;
   }
 }
+
+.group_theme{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .img_icon_light,
+  .img_icon_dark {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  
+  .img_icon_dark{
+    margin-left: 10px;
+  }
+}
+
+
 
 
