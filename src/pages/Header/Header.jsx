@@ -5,16 +5,18 @@ import {
   MenuUnfoldOutlined,
 } from '@ant-design/icons'
 import { Dropdown, Menu } from 'antd'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import icon_signin from '../../assets/icon_login.png'
 import profile_icon from '../../assets/profile_icon.png'
 import thongbao from '../../assets/thongbao.png'
+import { AuthContext } from '../../context/AuthContext'
 
 import './Header.scss'
 
 export const menuClose = -200
 
 const Header = ({ collapsed, setCollapsed }) => {
+  const { user, logOut } = useContext(AuthContext)
   const [menuPosistion, setMenuPosition] = useState(menuClose)
 
   const menu = () => {
@@ -42,6 +44,7 @@ const Header = ({ collapsed, setCollapsed }) => {
               className="p-5px pl-5px logout"
               onClick={() => {
                 setMenuPosition(menuClose)
+                logOut()
               }}>
               <span className="logout_icon">
                 <LoginOutlined />
@@ -65,7 +68,7 @@ const Header = ({ collapsed, setCollapsed }) => {
         </div>
         <div className="icon_margin">
           <img src={icon_signin} alt="icon_signin" className="img_icon" />
-          <span>Name</span>
+          <span>{user.email}</span>
           <Dropdown
             placement="bottomLeft"
             className="group_logout"
