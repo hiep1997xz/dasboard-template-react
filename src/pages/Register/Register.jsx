@@ -2,15 +2,12 @@ import { Button, Form, Input, message } from 'antd'
 import { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
-import { EMAIL_REGEX } from '../../util/constant'
+import { EMAIL_REGEX } from '../../util/constant.js'
 
-import fb from '../../assets/fb.png'
-import gg from '../../assets/gg.png'
+import './Register.scss'
 
-import './Login.scss'
-
-const Login = () => {
-  const { loginGoogle, loginFacebook, login, user } = useContext(AuthContext)
+const Register = () => {
+  const { createUser, user } = useContext(AuthContext)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -20,24 +17,11 @@ const Login = () => {
   const onFinish = () => {
     setError('')
     try {
-      login(email, password)
+      createUser(email, password)
     } catch (err) {
       setError(err.message)
-      message.success('Error')
       console.log(err.message)
     }
-  }
-
-  const handleLoginFb = () => {
-    try {
-      loginFacebook()
-    } catch (error) {}
-  }
-
-  const handleLoginGg = () => {
-    try {
-      loginGoogle()
-    } catch (error) {}
   }
 
   useEffect(() => {
@@ -58,7 +42,7 @@ const Login = () => {
         </div>
         <Form name="login-form" form={form} onFinish={onFinish}>
           <p className="form-title">Welcome back</p>
-          <p>Login to the Dashboard</p>
+          <p>Register a account</p>
           <Form.Item
             name="email"
             rules={[
@@ -69,7 +53,7 @@ const Login = () => {
               },
             ]}>
             <Input
-              placeholder="Username"
+              placeholder="Email"
               className="input-height"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -89,24 +73,16 @@ const Login = () => {
               type="primary"
               htmlType="submit"
               className="login-form-button">
-              LOGIN
+              REGISTER
             </Button>
           </Form.Item>
           <p>
-            Do not have an account <Link to="/register">Register</Link>
+            Do have an account <Link to="/">Login</Link>
           </p>
-          <div className="group_sso">
-            <div className="fb" onClick={() => handleLoginFb()}>
-              <img src={fb} alt="gg" className="icon-fb" />
-            </div>
-            <div className="gg" onClick={() => handleLoginGg()}>
-              <img src={gg} alt="gg" className="icon-gg" />
-            </div>
-          </div>
         </Form>
       </div>
     </div>
   )
 }
 
-export default Login
+export default Register
