@@ -4,20 +4,29 @@ import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
 } from '@ant-design/icons'
-import { Dropdown, Menu } from 'antd'
+import { Dropdown, Menu, Switch } from 'antd'
 import React, { useContext, useState } from 'react'
 import icon_signin from '../../assets/icon_login.png'
 import profile_icon from '../../assets/profile_icon.png'
 import thongbao from '../../assets/thongbao.png'
 import { AuthContext } from '../../context/AuthContext'
 
+import light from '../../assets/light.png'
+import dark from '../../assets/dark.png'
+
 import './Header.scss'
 
 export const menuClose = -200
 
-const Header = ({ collapsed, setCollapsed }) => {
+const Header = ({ 
+  collapsed, 
+  setCollapsed,
+  theme,
+  setTheme
+ }) => {
   const { user, logOut } = useContext(AuthContext)
   const [menuPosistion, setMenuPosition] = useState(menuClose)
+
 
   const menu = () => {
     return (
@@ -56,12 +65,24 @@ const Header = ({ collapsed, setCollapsed }) => {
       </>
     )
   }
+  
+  const handleChangeTheme = (value) => {
+    setTheme(value ? 'light' : 'dark');
+  }
 
   return (
-    <div className="header_container">
-      <div className="trigger" onClick={() => setCollapsed(!collapsed)}>
-        {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+    <div className={`header_container`}>
+      <div className="group_theme">
+        <div className="trigger" onClick={() => setCollapsed(!collapsed)}>
+          {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+        </div>
+        <div>
+          <img src={light} alt="" className="img_icon_light" />
+          <Switch onChange={handleChangeTheme}></Switch>
+          <img src={dark} alt="" className="img_icon_dark" />
+        </div>
       </div>
+
       <div className="group_icon">
         <div className="icon_margin">
           <img src={thongbao} alt="icon_signin" className="img_icon" />

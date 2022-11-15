@@ -23,8 +23,6 @@ const Login = () => {
       login(email, password)
     } catch (err) {
       setError(err.message)
-      message.success('Error')
-      console.log(err.message)
     }
   }
 
@@ -43,7 +41,6 @@ const Login = () => {
   useEffect(() => {
     if (user !== null) {
       navigate('/dasboard')
-      message.success('Success')
     }
   }, [user])
 

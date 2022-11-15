@@ -27,7 +27,6 @@ const Register = () => {
   useEffect(() => {
     if (user !== null) {
       navigate('/dasboard')
-      message.success('Success')
     }
   }, [user])
 

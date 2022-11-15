@@ -1,5 +1,17 @@
-.container{
+.container {
   height: 100vh;
+}
+
+.navbar_sider {
+  background: red;
+}
+
+.dark {
+  background: #001529 !important;
+}
+
+.light {
+  background: white !important;
 }
 
 .trigger {
@@ -15,9 +27,13 @@
 }
 
 .logo {
-  height: 32px;
+  display: flex;
+  justify-content: center;
   margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
+  .logo_img {
+    height: 30px;
+    width: 100px;
+  }
 }
 
 .site-layout .site-layout-background {
