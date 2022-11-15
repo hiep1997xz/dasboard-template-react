@@ -1,0 +1,57 @@
+@import '../../scss/global.scss';
+
+.header_container {
+  background: #fff;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+
+  .group_icon {
+    display: flex;
+    padding: 20px 20px 20px 20px;
+
+    .icon_margin {
+      display: flex;
+      margin-right: 30px;
+    }
+
+    .icon_margin span {
+      margin-left: 10px;
+    }
+
+    .icon_margin .group_logout{
+      margin-left: 20px;
+    } 
+
+    .img_icon {
+      width: 25px;
+      height: 25px;
+    }
+
+    .group_logout {
+      display: flex;
+    }
+
+    :global {
+      .ant-dropdown {
+        margin-right: 20px !important;
+      }
+    }
+  }
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+
+  .logout_icon {
+    margin-right: 10px;
+  }
+
+  .img_icon_menu{
+    width: 15px;
+    height: 15px;
+  }
+}
+
+
