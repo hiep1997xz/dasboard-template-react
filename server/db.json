@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "username": "Sudeep_123",
+      "email": "hiep1997xz@gmail.com",
+      "gender": "others",
+      "hobbies": [
+        "Writing"
+      ],
+      "review": 54,
+      "notificaiton": true,
+      "id": 1
+    },
+    {
+      "username": "123",
+      "email": "hiep1997xz@gmail.com",
+      "gender": "female",
+      "hobbies": [
+        "Singing"
+      ],
+      "review": 30,
+      "notificaiton": "",
+      "id": 3
+    },
+    {
+      "username": "123_abc",
+      "email": "hiep1997xz@gmail.com",
+      "gender": "others",
+      "hobbies": [
+        "Writing"
+      ],
+      "review": 43,
+      "notificaiton": true,
+      "id": 4
+    },
+    {
+      "username": "Sudeep_123",
+      "email": "hiep1997xz@gmail.com",
+      "gender": "others",
+      "hobbies": [
+        "Reading"
+      ],
+      "review": 100,
+      "notificaiton": true,
+      "id": 5
+    }
+  ]
+}
