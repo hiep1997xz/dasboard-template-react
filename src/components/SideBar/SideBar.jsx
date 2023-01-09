@@ -1,9 +1,10 @@
 import {
+  AreaChartOutlined,
+  EditOutlined,
   HolderOutlined,
   HomeOutlined,
   UnorderedListOutlined,
   UserOutlined,
-  EditOutlined
 } from '@ant-design/icons'
 import { Menu } from 'antd'
 import React from 'react'
@@ -17,6 +18,7 @@ const SideBar = ({ theme }) => {
   const handleListUserClick = () => navigate('/list-user')
   const handleKanbaClick = () => navigate('/kanba')
   const handleEditorClick = () => navigate('/editor')
+  const handleChatJs = () => navigate('/chatjs')
 
   return (
     <>
@@ -39,10 +41,14 @@ const SideBar = ({ theme }) => {
           <span>Kanba</span>
         </Menu.Item>
         <Menu.Item key="4" onClick={handleEditorClick}>
-        <EditOutlined />
+          <EditOutlined />
           <span>Editor</span>
         </Menu.Item>
-        <Menu.Item key="5" onClick={handleVideosClick}>
+        <Menu.Item key="5" onClick={handleChatJs}>
+        <AreaChartOutlined />
+          <span>ChatJs</span>
+        </Menu.Item>
+        <Menu.Item key="6" onClick={handleVideosClick}>
           <UserOutlined />
           <span> Project</span>
         </Menu.Item>

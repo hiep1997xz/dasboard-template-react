@@ -19,6 +19,7 @@ import ListUser from './pages/ListUser/ListUser'
 import FormInput from './components/Form/Form'
 import Kanba from './pages/Kanba/Kanba'
 import Editor from './pages/Editor/Editor'
+import ChatJs from './pages/Chatjs/ChatJs'
 
 const App = () => {
   const { Sider, Content } = Layout
@@ -63,6 +64,7 @@ const App = () => {
                   <Route path="/form" element={<FormInput />} />
                   <Route path="/kanba" element={<Kanba />} />
                   <Route path="/editor" element={<Editor />} />
+                  <Route path="/chatjs" element={<ChatJs />} />
                 </Routes>
               </Content>
               <Footer />

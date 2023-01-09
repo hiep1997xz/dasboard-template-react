@@ -43,6 +43,17 @@
       "review": 100,
       "notificaiton": true,
       "id": 5
+    },
+    {
+      "username": "Sudeep_123",
+      "email": "hiep1997xz@gmail.com",
+      "gender": "male",
+      "hobbies": [
+        "Writing"
+      ],
+      "review": 34,
+      "notificaiton": true,
+      "id": 6
     }
   ]
 }
