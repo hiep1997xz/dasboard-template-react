@@ -9,3 +9,64 @@
 .mb-100px{
   margin-bottom: 100px;
 }
+
+.group_charts{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+}
+
+// bar
+.bar,
+.line,
+.doughnut,
+.pie,
+.polar {
+  width: 805px;
+  height: 500px;
+  background-color: rgba(220, 226, 230, 0.3);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bar div {
+  padding: 10px;
+}
+
+.bar h1,
+.line h1,
+.doughnut h1,
+.pie h1,
+.polar h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.bar,
+.doughnut {
+  margin-right: 20px;
+}
+
+.pie div canvas,
+.doughnut div canvas,
+.polar div canvas {
+  display: flex;
+  justify-content: center;
+  height: 450px !important;
+  width: 450px !important;
+}
+
+.pie div,
+.doughnut div,
+.polar div {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  padding-left: 20px;
+  font-size: 20px;
+}

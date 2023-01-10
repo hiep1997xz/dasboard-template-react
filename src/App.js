@@ -45,7 +45,7 @@ const App = () => {
               collapsed={collapsed}
               className={theme}>
               <div className="logo">
-                <img src={logo} alt="logo" className="logo_img" />
+                {/* <img src={logo} alt="logo" className="logo_img" /> */}
               </div>
               <SideBar theme={theme} />
             </Sider>
