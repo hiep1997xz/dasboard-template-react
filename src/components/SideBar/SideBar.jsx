@@ -5,6 +5,7 @@ import {
   HomeOutlined,
   UnorderedListOutlined,
   UserOutlined,
+  TableOutlined
 } from '@ant-design/icons'
 import { Menu } from 'antd'
 import React from 'react'
@@ -16,6 +17,7 @@ const SideBar = ({ theme }) => {
   const handleUserClick = () => navigate('/dasboard')
   const handleVideosClick = () => navigate('/project')
   const handleListUserClick = () => navigate('/list-user')
+  const handleAdvTableClick = () => navigate('/adv-table')
   const handleKanbaClick = () => navigate('/kanba')
   const handleEditorClick = () => navigate('/editor')
   const handleChatJs = () => navigate('/chatjs')
@@ -31,24 +33,28 @@ const SideBar = ({ theme }) => {
           <UnorderedListOutlined />
           <span> ListUser</span>
         </Menu.Item>
+        <Menu.Item key="3" onClick={handleAdvTableClick}>
+          <TableOutlined />
+          <span>Adv Table</span>
+        </Menu.Item>
         {/* <Menu.SubMenu title={titleSubMenu}>
           <Menu.Item>item 3</Menu.Item>
           <Menu.Item>item 3</Menu.Item>
           <Menu.Item>item 3</Menu.Item>
         </Menu.SubMenu> */}
-        <Menu.Item key="3" onClick={handleKanbaClick}>
+        <Menu.Item key="4" onClick={handleKanbaClick}>
           <HolderOutlined />
           <span>Kanba</span>
         </Menu.Item>
-        <Menu.Item key="4" onClick={handleEditorClick}>
+        <Menu.Item key="5" onClick={handleEditorClick}>
           <EditOutlined />
           <span>Editor</span>
         </Menu.Item>
-        <Menu.Item key="5" onClick={handleChatJs}>
+        <Menu.Item key="6" onClick={handleChatJs}>
         <AreaChartOutlined />
           <span>ChatJs</span>
         </Menu.Item>
-        <Menu.Item key="6" onClick={handleVideosClick}>
+        <Menu.Item key="7" onClick={handleVideosClick}>
           <UserOutlined />
           <span> Project</span>
         </Menu.Item>

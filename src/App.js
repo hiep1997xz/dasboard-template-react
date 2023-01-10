@@ -20,6 +20,7 @@ import FormInput from './components/Form/Form'
 import Kanba from './pages/Kanba/Kanba'
 import Editor from './pages/Editor/Editor'
 import ChatJs from './pages/Chatjs/ChatJs'
+import AdvTable from './pages/AdvTable/AdvTable'
 
 const App = () => {
   const { Sider, Content } = Layout
@@ -61,6 +62,7 @@ const App = () => {
                   <Route path="/dasboard" element={<Home />} />
                   <Route path="/project" element={<Profile />} />
                   <Route path="/list-user" element={<ListUser />} />
+                  <Route path="/adv-table" element={<AdvTable />} />
                   <Route path="/form" element={<FormInput />} />
                   <Route path="/kanba" element={<Kanba />} />
                   <Route path="/editor" element={<Editor />} />
