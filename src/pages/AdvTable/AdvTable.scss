@@ -1,0 +1,12 @@
+.advTable_container{
+  background: #fff;
+  margin: 24px 16px;
+  padding: 24;
+  height: 85vh;
+  overflow: auto;
+  padding: 20px 20px 0 20px;
+}
+
+.ant-table-tbody>tr>td, .ant-table-thead>tr>th, .ant-table tfoot>tr>td, .ant-table tfoot>tr>th {
+  padding: 9px !important;
+}
