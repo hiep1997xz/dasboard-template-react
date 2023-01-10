@@ -30,10 +30,9 @@
   display: flex;
   justify-content: center;
   margin: 16px;
-  .logo_img {
-    height: 30px;
-    width: 100px;
-  }
+  height: 30px;
+  background: white;
+  opacity: 0.5;
 }
 
 .site-layout .site-layout-background {

@@ -4,7 +4,7 @@ import React from 'react'
 import { Doughnut, Pie } from 'react-chartjs-2'
 import '../ChatJs.scss'
 
-const DoughnutChart = () => {
+const PieChart = () => {
   ChartJS.register(ArcElement, Tooltip, Legend)
 
   const labels = [
@@ -46,9 +46,9 @@ const DoughnutChart = () => {
 
   return (
     <div>
-        <Doughnut data={data} />
+        <Pie data={data} />
     </div>
   )
 }
 
-export default DoughnutChart
+export default PieChart;
