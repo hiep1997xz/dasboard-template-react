@@ -1,0 +1,7 @@
+ <div>
+      <h1>Một số dạng ck edit tham khảo</h1>
+      <a href='https://www.npmjs.com/package/jodit-react?fbclid=IwAR04M6pb8lkUiUAbKp9E8M3SBbehlWPDSkF7mBH1RfVwszdrXAxfmQaCk6A'>React Jodit</a>
+      <a href='https://quilljs.com/'>Quill Editor</a>
+      <a href='http://suneditor.com/sample/index.html'>Sun Editor</a>
+      <a href='https://www.npmjs.com/package/react-quill'>React Quill</a>
+    </div>

@@ -21,6 +21,7 @@ import Kanba from './pages/Kanba/Kanba'
 import Editor from './pages/Editor/Editor'
 import ChatJs from './pages/Chatjs/ChatJs'
 import AdvTable from './pages/AdvTable/AdvTable'
+import GoogleMap from './pages/GoogleMap/GoogleMap'
 
 const App = () => {
   const { Sider, Content } = Layout
@@ -67,6 +68,7 @@ const App = () => {
                   <Route path="/kanba" element={<Kanba />} />
                   <Route path="/editor" element={<Editor />} />
                   <Route path="/chatjs" element={<ChatJs />} />
+                  <Route path="/maps" element={<GoogleMap />} />
                 </Routes>
               </Content>
               <Footer />
